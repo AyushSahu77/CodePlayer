@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodePlayer</title>
+    <script src="jQuery-3.6.0.min.js"></script>
+    <script src="jquery-ui-1.13.1/jquery-ui.js"></script>
+    <link href="jquery-ui-1.13.1/jquery-ui.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="navBar">
+        <div id="titleName">
+            <h1>ASCodePlayer</h1>
+        </div>
+        <div id="buttonContainer">
+            <button class="Btn" id="html" value="htmlValue">HTML</button>
+            <button class="Btn" id="css" value="cssValue">CSS</button>
+            <button class="Btn" id="js" value="jsValue">Javascript</button>
+            <button class="Btn" id="output" value="outputValue">Output</button>
+        </div>
+    </div>
+    <div id="bodyContainer">
+        <textarea id="htmlContent" class="panel" cols="30" rows="10">
+            <p id="textAreaPara">Hello there!</p> 
+        </textarea>
+        <textarea id="cssContent" class="panel hidden" cols="30" rows="10">
+            p { color : blue; } 
+        </textarea>
+        <textarea id="jsContent" class="panel hidden" cols="30" rows="10">
+            document.getElementById("textAreaPara").innerHTML = "Hello Ayush!";
+        </textarea>
+        <iframe id="outputContent" class="panel">
+        </iframe>
+    </div>
+
+    <footer>
+        <div>Made with ❤️ by Ayush Sahu. All rights reserved.</div>
+    </footer>
+    <script>
+
+        function outputUpdate() {
+            
+            $("#outputContent").contents().find("html").html("<html><head><style type='text/css'>" + $("#cssContent").val() + "</style></head><body>" + $("#htmlContent").val() + "</body></html>");
+        
+            document.getElementById("outputContent").contentWindow.eval($("#jsContent").val());
+        
+        }
+        
+        $(".Btn").click(function () {
+            var panelId = $(this).attr("id") + "Content";
+            $("#" + panelId).toggleClass("hidden");
+            var panelsActive = 4 - $(".hidden").length;
+            $(".panel").width(($(window).width() / panelsActive) - 21);
+        });
+        
+        // On Page load 
+        
+        $(".panel").height($(window).height() - $("#navBar").height() - 48);
+        $(".panel").width(($(window).width() / 2) - 21);
+        
+        outputUpdate();
+        
+        // on change on any textarea
+        
+        $("textarea").on('change keyup paste', function () {
+            outputUpdate();
+        });
+
+    </script>
+</body>
+
+</html>
+

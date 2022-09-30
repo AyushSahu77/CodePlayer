@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+#navBar {
+    background-color: #DADADB;
+    height: 8vh;
+    width: 100vw;
+}
+
+#titleName {
+    padding: 0.6vh 0vh 0vh 1vh;
+    float: left;
+}
+
+#buttonContainer {
+    position: relative;
+    text-align: center;
+    align-items: center;
+    padding-top: 1.8vh;
+}
+
+#buttonContainer :hover {
+    background-color: #dad3e0;
+}
+
+#html {
+    margin-right: -5px;
+    width: 60px;
+    height: 30px;
+    font-weight: bold;
+    background-color: #D84A24;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#css {
+    margin-right: -5px;
+    width: 50px;
+    height: 30px;
+    font-weight: bolder;
+    background-color: #0B73B8;
+}
+
+#js {
+    margin-right: -5px;
+    width: 90px;
+    height: 30px;
+    font-weight: bolder;
+    background-color: #E5A228;
+}
+
+#output {
+    width: 60px;
+    height: 30px;
+    font-weight: bolder;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.panel {
+    resize: none;
+}
+
+#htmlContent {
+
+    border-top: none;
+    border-bottom: none;
+    padding: 10px;
+}
+
+#cssContent {
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+}
+#jsContent {
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+}
+
+#outputContent {
+    padding: 10px;
+    border:none;
+    
+}
+
+.panel {
+    float: left;
+    margin-bottom: 2px;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    background-color: #DADADB;
+    height: 26px;
+    clear: both;
+}
