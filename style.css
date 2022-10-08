@@ -34,7 +34,7 @@
     width: 60px;
     height: 30px;
     font-weight: bold;
-    background-color: #D84A24;
+    background-color: #f06946;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
@@ -105,4 +105,5 @@ footer {
     background-color: #DADADB;
     height: 26px;
     clear: both;
+    font-weight: normal;
 }
