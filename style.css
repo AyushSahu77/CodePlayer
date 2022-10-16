@@ -25,6 +25,17 @@
     padding-top: 1.8vh;
 }
 
+a {
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    margin-right: 5px;
+    width: 60px;
+    height: 30px;
+    font-weight: bold;
+    background-color: #b57eef;
+    border-radius: 5px;
+}
+
 #buttonContainer :hover {
     background-color: #dad3e0;
 }
