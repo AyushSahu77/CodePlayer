@@ -17,12 +17,11 @@ Twitter [Twitter]
 
 \
 \
-\
 P.S. 
 
 Used IDE : Visual Studio 1.67.0 on MacOS Monterey 12.6
 
-File names are simple as this is a deployed project on GitHub Pages
+File names are default as this is a deployed project on GitHub Pages.
 
 Download Visual Studio Code on your machine at [VScode]
 
@@ -34,3 +33,5 @@ Download Visual Studio Code on your machine at [VScode]
 [GoDownload]: <https://go.dev//>
 [VScode]:<https://code.visualstudio.com//>
 [w3-Offical]: <https://www.w3schools.com//>
+
+Anugya Sahu
